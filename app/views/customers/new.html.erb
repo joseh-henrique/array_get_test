@@ -1,0 +1,10 @@
+<h1>Customers#new</h1>
+<p>You've been selected the following customers:</p>
+
+<ul>
+  <% @ids.each do |id| %>
+    <li><%= id %></li>
+  <% end %>
+</ul>
+
+<%= link_to customers_path do %>Select again<% end %>

@@ -1,0 +1,11 @@
+<h1>Customers#index</h1>
+
+<%= form_tag new_customer_path, method: :get do %>
+  <ul>
+    <% @customers.each do |customer| %>
+      <li><%= check_box_tag "customer_ids[]", customer.id %><%= customer.id %> - <%= customer.name %></li>
+    <% end %>
+  </ul>
+
+  <%= submit_tag "Send checked items" %>
+<% end %>
